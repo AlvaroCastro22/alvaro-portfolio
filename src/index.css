@@ -1,0 +1,18 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+html{
+  font-size: 16px
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --azul-300:#3A3AE4
+}
+.background-image{
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/744/520/23/spider-man-games-art-vertical-artwork-wallpaper-preview.jpg)
+}
