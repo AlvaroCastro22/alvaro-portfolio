@@ -14,7 +14,7 @@ const HeroSection = () => {
               
             </div>
             <div  className="flex items-center gap-4 md:gap-7">
-              <button className="text-[12px] lg:text-[16px] py-2 px-4  border-4 rounded-xl border-[var(--azul-300)] text-[var(--azul-300)]">Conoce mas de mi trabajo</button>
+              <a href="#div_id" className="text-[12px] lg:text-[16px] py-2 px-4  border-4 rounded-xl border-[var(--azul-300)] text-[var(--azul-300)]">Conoce mas de mi trabajo</a>
               <p><a href="" className="underline text-[8px] md:text-[12px] text-primary-500 decoration-solid leading-4">Como se realizo este portafolio</a></p>
               
             </div>

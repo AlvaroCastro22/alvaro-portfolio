@@ -54,7 +54,7 @@ function App() {
         <div className="bg-black-100  relative ">
           
           <div className="w-full bg-white h-fit absolute -top-[48vh] md:-top-[40vh] lg:-top-[65vh]">
-          <div className="w-full h-full py-9 lg:py-10 overflow-hidden">
+          <div className="w-full h-full py-9 lg:py-10 overflow-hidden" id="div_id">
                       <div className="flex flex-col items-center gap-2 lg:gap-3 ">
                         <h2 data-aos="zoom-in" className="text-[clamp(16px,3.2vw,18px)] lg:text-[26px] font-bold text-primary-500">Proyectos Realizados</h2>
                         <p className="text-[clamp(14px,5.8vw,32px)] leading-[clamp(0px,5vw,32px)] lg:text-[42px] lg:leading-[45px] text-center">Desde wireframes hasta diseños de <br /> paginas totalmente programadas</p>
