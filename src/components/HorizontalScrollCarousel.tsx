@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Card from "./Card";
-import SimpleParallax from "simple-parallax-js";
 import {Parallax } from 'react-scroll-parallax';
  const HorizontalScrollCarousel = () => {
     const targetRef = useRef(null);

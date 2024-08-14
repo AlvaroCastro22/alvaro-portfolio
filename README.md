@@ -11,7 +11,7 @@
 
 <p align="left">He realizado este formulario para recopilar los proyectos que he realizado de manera autonoma y profesional con el fin de mostrar mi trabajo a los que esten interesados en conoce. El diseño UX de este proyecto se encuentra en el siguiente link: </p>
 
-[I'm an inline-style link](https://www.google.com)
+[Link al proyecto en Figma](https://www.figma.com/design/ZubjkFO8mkI6rIiTy4vOEY/Untitled?node-id=5-74&t=RP7OY8QXDxURdqlC-1)
 ###
 <h2 align="left">Las tecnologias usadas para este formulario son: </h2>
 

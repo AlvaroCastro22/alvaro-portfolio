@@ -1,11 +1,10 @@
 import Topbar from "./components/Topbar"
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import 'animate.css';
-import { ReactLenis, useLenis } from 'lenis/react'
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+
+
 import HorizontalScrollCarousel from "./components/HorizontalScrollCarousel";
-import { ParallaxProvider,Parallax } from 'react-scroll-parallax';
+import { ParallaxProvider, } from 'react-scroll-parallax';
 import Proyect from "./components/Proyect";
 import AOS from "aos"
 import 'aos/dist/aos.css';
@@ -16,9 +15,7 @@ function App() {
 },[])
   const [isFadedIn, setIsFadedIn] = useState(true);
   const [fade, setFade] = useState(true);
-  const lenis = useLenis(({ scroll }) => {
-    // called every scroll
-  })
+
   useEffect(() => {
     
     const timer = setTimeout(() => {
