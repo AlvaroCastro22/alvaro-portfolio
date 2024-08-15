@@ -39,7 +39,7 @@ export const db:DbProps = {
         categoria:"Personal"
         ,titulo:"Contador Calorias React"
         ,descripcion:"Proyecto creado en React, usando Typescript y Tailwind. Este proyecto cuenta con un formulario donde puede agregar la actividad o comida y la cantidad de calorias que consume o gasta, y muestra la diferencia calorica. Este proyecto uso conceptos como useReducer y useEffect de React, y types de TypeScript."
-        ,link:"string"
+        ,link:"https://contadorde-calorias-react.netlify.app/"
         ,secondLink:""
         ,imagen:"/images/proyecto 2.png"
     },
@@ -55,7 +55,7 @@ export const db:DbProps = {
         categoria:"Personal"
         ,titulo:"Tienda de Guitarras"
         ,descripcion:"Proyecto realizado con React, TypeScript y Tailwind, al estilo MarketPlace de una tienda de Guitarras que permite escoger items al carrito de la pagina, aumentar la cantidad y calcular el total a pagar. Se usaron conceptos avanzados como Custom Hooks y Functional Components y useReducer para manejar el estado del proyecto."
-        ,link:"string"
+        ,link:"https://guitar-store-demo.netlify.app/"
         ,secondLink:""
         ,imagen:"/images/proyecto 4.png"}]
 }
