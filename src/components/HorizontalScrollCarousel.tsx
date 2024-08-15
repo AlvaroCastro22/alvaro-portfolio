@@ -2,7 +2,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Card from "./Card";
 import {Parallax } from 'react-scroll-parallax';
- const HorizontalScrollCarousel = () => {
+
+import { DbProps } from "../data/db";
+
+type CarouselProps = {
+  data: DbProps
+}
+ const HorizontalScrollCarousel = ({data}:CarouselProps) => {
     const targetRef = useRef(null);
     const { scrollYProgress } = useScroll({
       target: targetRef,
@@ -10,14 +16,15 @@ import {Parallax } from 'react-scroll-parallax';
     
     
     const x = useTransform(scrollYProgress, [0, 1], ["40%", "-60%"]);
-  
+    
+    
     return (
         <div className="w-full ">
-        <div  className="relative bg-black-300 w-full">
+        <div  className="relative bg-black-200 w-full">
           <section ref={targetRef}  className="relative  h-[200vh] md:h-[300vh]  w-full">
             
                 <div className="sticky top-[6%] md:top-[0px] flex flex-col  h-[75vh] min-h-[400px] min-[335px]:min-h-[500px] min-[500px]:min-h-[620px] sm:h-[80vh]  md:h-screen items-center overflow-hidden  py-8 ">
-                    <Parallax className="w-full" speed={-50} translateY={['-80px', '0px']} easing={"easeInOut"}>
+                    <Parallax className="w-full" speed={-50} translateY={['-60%', '0%']} easing={"easeInOut"}>
                       <h2 className="text-white text-[clamp(0px,14vw,76px)] leading-[clamp(0px,12vw,64px)] md:leading-[94px] md:text-[6.4rem] ">Mis <span className="text-primary-300">habilidades <br /> </span> como FrontEnd</h2>
                     </Parallax>
                     <Parallax className="absolute bottom-0" speed={-20} translateY={['-10px', '0px']} easing={"easeInOut"}>
@@ -26,9 +33,7 @@ import {Parallax } from 'react-scroll-parallax';
                         {/* {cards.map((card) => {
                           return <Card card={card} key={card.id} />;
                         })} */}
-                        <Card/>
-                        <Card/>
-                        <Card/>
+                        {data.info.map(x=><Card props={x}/>)}
                       </motion.div>
                     
                    </Parallax> 

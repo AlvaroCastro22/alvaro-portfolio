@@ -9,7 +9,17 @@ import Proyect from "./components/Proyect";
 import AOS from "aos"
 import 'aos/dist/aos.css';
 import HeroSection from "./components/HeroComponent";
+import Footer from "./components/Footer";
+import { db } from "./data/db";
 function App() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/document/CV 2024.pdf'; 
+    link.download = 'CV 2024.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   useEffect(()=>{
     AOS.init();
 },[])
@@ -45,45 +55,28 @@ function App() {
           </div>
           
         </div>
-        <Topbar/>
+        <Topbar handleDownload={handleDownload}/>
         <HeroSection/> 
-        <HorizontalScrollCarousel/>
+        <HorizontalScrollCarousel data={db}/>
         <div className="bg-black-100  relative ">
           
           <div className="w-full bg-white h-fit absolute -top-[48vh] md:-top-[40vh] lg:-top-[65vh]">
           <div className="w-full h-full py-9 lg:py-10 overflow-hidden" id="div_id">
                       <div className="flex flex-col items-center gap-2 lg:gap-3 ">
+                      <button onClick={handleDownload}>
+      Descargar archivo
+    </button>
                         <h2 data-aos="zoom-in" className="text-[clamp(16px,3.2vw,18px)] lg:text-[26px] font-bold text-primary-500">Proyectos Realizados</h2>
                         <p className="text-[clamp(14px,5.8vw,32px)] leading-[clamp(0px,5vw,32px)] lg:text-[42px] lg:leading-[45px] text-center">Desde wireframes hasta diseños de <br /> paginas totalmente programadas</p>
                       </div>
                       <div   className="w-full h-full px-[2vw] md:px-[16px] mt-8 flex flex-col items-center pt-10  gap-9 md:gap-12 ">
-                        <Proyect position="izq"/>
-                        <Proyect position="der"/>
-                        <Proyect position="izq"/>
+                        {db.proyect.map(x=><Proyect props={x}/>)}
+                        
                       </div>
                     </div>
                     
 
-          <footer className=" bg-black-200  shadow  w-full">
-              <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-                <span className="text-sm text-gray-500 sm:text-center text-white">© 2024 <a href="https://flowbite.com/" className="hover:underline">Alvaro Castro™</a>. Todos los derechos reservados.
-              </span>
-              <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                  <li>
-                      <a href="#" className="hover:underline me-4 md:me-6 text-white hover:text-primary-400">About</a>
-                  </li>
-                  <li>
-                      <a href="#" className="hover:underline me-4 md:me-6 text-white hover:text-primary-400">Privacy Policy</a>
-                  </li>
-                  <li>
-                      <a href="#" className="hover:underline me-4 md:me-6 text-white hover:text-primary-400">Licensing</a>
-                  </li>
-                  <li>
-                      <a href="#" className="hover:underline text-white hover:text-primary-400">Contact</a>
-                  </li>
-              </ul>
-              </div>
-          </footer>
+          <Footer handleDownload={handleDownload}/>
 
           </div>
         </div>

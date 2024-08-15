@@ -1,7 +1,8 @@
 const HeroSection = () => {
     return (
-        <section className="w-full h-screen min-h-[640px]  flex pl-[10px] md:pl-10  ">
-          <div className="flex flex-col gap-11 md:gap-12  h-fit sticky top-4 pb-[200px] md:pb-4 pt-13">
+        <section className="w-full md:h-screen md:min-h-[880px]  flex flex-col sm:flex-row px-[10px] md:px-[6px] ">
+          <div className=" flex flex-col sm:flex-row  h-fit sticky top-4 pb-[200px] md:pb-4 pt-13 w-full justify-between gap-8 md:mx-auto md:gap-2 md:max-w-[900px] lg:gap-2 lg:max-w-[1400px]">
+            <div className="flex flex-col gap-11 md:gap-12">
             <div className="flex flex-col gap-7 lg:gap-8">
               <div>
 
@@ -14,11 +15,16 @@ const HeroSection = () => {
               
             </div>
             <div  className="flex items-center gap-4 md:gap-7">
-              <a href="#div_id" className="text-[12px] lg:text-[16px] py-2 px-4  border-4 rounded-xl border-[var(--azul-300)] text-[var(--azul-300)]">Conoce mas de mi trabajo</a>
-              <p><a href="" className="underline text-[8px] md:text-[12px] text-primary-500 decoration-solid leading-4">Como se realizo este portafolio</a></p>
+              <a href="#div_id" className="text-[12px] lg:text-[16px] py-2 px-4  border-4 rounded-xl border-[var(--azul-300)] text-[var(--azul-300)] hover:bg-primary-300 hover:text-white">Conoce mas de mi trabajo</a>
+              <p><a href="https://github.com/AlvaroCastro22/alvaro-portfolio" className="underline text-[8px] md:text-[12px] text-primary-500 decoration-solid leading-4 hover:font-bold">Como se realizo este portafolio</a></p>
               
             </div>
+            </div>
+            <div className=" flex justify-center h-fit">
+            <img className="w-full max-w-[500px] sm:max-w-[300px] md:min-w-[200px] lg:max-w-[500px] " src="/images/hero-image.png" alt="" />
+            </div>
           </div>
+          
         </section>
     )
 }
